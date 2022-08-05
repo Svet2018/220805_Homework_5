@@ -26,7 +26,18 @@ int[] GenerateArray(int arg1)
   return genArray;
 };
 
+void PrintArray(int[] arrayPrint)
+{
+  int lengthArray = arrayPrint.Length;
+  int position = 0;
+  while(position < lengthArray)
+  {
+    System.Console.Write(arrayPrint[position] + ", ");
+    position++;
+  }
+};
 
+PrintArray(GenerateArray(10));
 
 
 
