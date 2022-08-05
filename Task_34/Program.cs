@@ -15,7 +15,7 @@ int[] GenerateArray(int arg1)
   int [] genArray = new int[arg1];
   int length = genArray.Length;
   int index = 0;
-  int a =0;
+  int a = 0;
   while(index < length)
   {
     a = PositiveNumbers();
@@ -26,6 +26,7 @@ int[] GenerateArray(int arg1)
   return genArray;
 };
 
+/*
 void PrintArray(int[] arrayPrint)
 {
   int lengthArray = arrayPrint.Length;
@@ -35,9 +36,33 @@ void PrintArray(int[] arrayPrint)
     System.Console.Write(arrayPrint[position] + ", ");
     position++;
   }
-};
+}*/
 
-PrintArray(GenerateArray(10));
+int EvenNumbers(int [] argArray)
+{
+    int length = argArray.Length;
+    int sum = 0;
+    for (int i = 0; i < length; i++)
+    {
+        if (argArray[i] % 2 ==0)
+        {
+            sum = sum + 1;
+        }
+        System.Console.Write(argArray[i] + ", ");
+    }
+    System.Console.WriteLine();
+    System.Console.WriteLine("Четных чисел в массиве:");
+    return sum;
+}
+
+int GetNum()
+{
+    System.Console.WriteLine("Введите длину массива:");
+    int argument = Convert.ToInt32(Console.ReadLine());
+    return argument;
+}
+
+System.Console.WriteLine(EvenNumbers(GenerateArray(GetNum())));
 
 
 
