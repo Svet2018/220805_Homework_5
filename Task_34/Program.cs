@@ -3,10 +3,32 @@
 //[345, 897, 568, 234] -> 2
 
 
+
 int PositiveNumbers()
 {
     int posNum = new Random().Next(100, 1000);
     return posNum;
-}
+};
 
-System.Console.WriteLine(PositiveNumbers());
+int[] GenerateArray(int arg1)
+{
+  int [] genArray = new int[arg1];
+  int length = genArray.Length;
+  int index = 0;
+  int a =0;
+  while(index < length)
+  {
+    a = PositiveNumbers();
+    genArray[index] = a;
+    index++;
+    a = 0;
+  }
+  return genArray;
+};
+
+
+
+
+
+
+
