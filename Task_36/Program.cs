@@ -3,27 +3,31 @@
 //[3, 7, 23, 12] -> 19
 //[-4, -6, 89, 6] -> 0
 
-int PositiveNumbers()
+int GetLen()
+{
+    System.Console.WriteLine("Введите длину массива:");
+    int argument = Convert.ToInt32(Console.ReadLine());
+    return argument;
+}
+
+int GenerateNumbers()
 {
     int posNum = new Random().Next(-1000, 1000);
     return posNum;
-};
+}
 
 int[] GenerateArray(int arg1)
 {
   int [] genArray = new int[arg1];
   int length = genArray.Length;
   int index = 0;
-  int a = 0;
   while(index < length)
   {
-    a = PositiveNumbers();
-    genArray[index] = a;
+    genArray[index] = GenerateNumbers();
     index++;
-    a = 0;
   }
   return genArray;
-};
+}  
 
 int EvenNumbers(int [] argArray)
 {
@@ -42,11 +46,6 @@ int EvenNumbers(int [] argArray)
     return sum;
 }
 
-int GetNum()
-{
-    System.Console.WriteLine("Введите длину массива:");
-    int argument = Convert.ToInt32(Console.ReadLine());
-    return argument;
-}
+System.Console.WriteLine(EvenNumbers(GenerateArray(GetLen())));
 
-System.Console.WriteLine(EvenNumbers(GenerateArray(GetNum())));
+
