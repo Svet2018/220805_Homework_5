@@ -29,7 +29,7 @@ int[] GenerateArray(int arg1)
   return genArray;
 }  
 
-int EvenNumbers(int [] argArray)
+void EvenNumbers(int [] argArray)
 {
     int length = argArray.Length;
     int sum = 0;
@@ -42,10 +42,9 @@ int EvenNumbers(int [] argArray)
         System.Console.Write(argArray[i] + ", ");
     }
     System.Console.WriteLine();
-    System.Console.WriteLine("Сумма элементов на нечетных позициях:");
-    return sum;
+    System.Console.WriteLine($"Сумма элементов на нечетных позициях: {sum}");
 }
 
-System.Console.WriteLine(EvenNumbers(GenerateArray(GetLen())));
+EvenNumbers(GenerateArray(GetLen()));
 
 

@@ -29,7 +29,7 @@ int[] GenerateArray(int arg1)
 };
 
 
-int EvenNumbers(int [] argArray)
+void EvenNumbers(int [] argArray)
 {
     int length = argArray.Length;
     int sum = 0;
@@ -42,13 +42,11 @@ int EvenNumbers(int [] argArray)
         System.Console.Write(argArray[i] + ", ");
     }
     System.Console.WriteLine();
-    System.Console.WriteLine("Четных чисел в массиве:");
-    return sum;
+    System.Console.WriteLine($"Четных чисел в массиве: {sum}");
 }
 
+EvenNumbers(GenerateArray(GetNum()));
 
-
-System.Console.WriteLine(EvenNumbers(GenerateArray(GetNum())));
 
 
 
